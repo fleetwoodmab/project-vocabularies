@@ -371,8 +371,8 @@ var Editor = {
 
         $.ajax({
           type: "POST",
-          url: "https://www.geolba.net/editor/ws/mail.php",
-          data: { send_email: true },
+          url: "https://resource.geosphere.at/updatetool/ws/mail.php",
+          data: { mail: true },
           success: function (data) {
               console.log(data); 
           },
