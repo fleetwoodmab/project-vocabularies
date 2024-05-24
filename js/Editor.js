@@ -47,7 +47,7 @@ var Editor = {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" name="send_email" onclick="Editor.saveAttribute();">Save changes</button>
+        <button type="button" class="btn btn-primary" name="email" onclick="Editor.saveAttribute();">Save changes</button>
       </div>
     </div>
   </div>
@@ -372,7 +372,7 @@ var Editor = {
         $.ajax({
           type: "POST",
           url: "https://www.geolba.net/editor/ws/mail.php",
-          data: { send_email: true },
+          data: { email: true },
           success: function (data) {
               console.log(data); 
           },
