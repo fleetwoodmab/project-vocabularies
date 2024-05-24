@@ -372,7 +372,7 @@ var Editor = {
         $.ajax({
           type: "POST",
           url: "https://www.geolba.net/editor/ws/mail.php",
-          data: { email: true },
+          data: { mail: false },
           success: function (data) {
               console.log(data); 
           },
