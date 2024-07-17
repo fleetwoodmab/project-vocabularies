@@ -184,10 +184,9 @@ var Editor = {
                     if (ix > 0)
                         h = h.substring(0, ix);
                     let attr = attribute.text().trim();
-                    let val = h.trim().replace(/^\s+|\s+$/g, "").replaceAll("\"", "\\\"").replaceAll("\'", "\\\'");
+                    let val = $.trim(h).replace(/"/g, '\\"').replace(/'/g, "\\'");
                     if (Editor.TOPIC_LIST.includes(attr)) {
                         let newContent = orig_h + "&nbsp;&nbsp;<a class='editorLink' title='Edit value' href='javascript: Editor.editAttribute(\"" + attr + "\"," + (count > 1 ? index : null) + ", \"" + val + "\", \"" + lang + "\"@@proposed);'><i class=\"fa fa-edit\"></i></a> ";
-
                         $.ajax({
                             type: "POST",
                             url: "https://www.geolba.net/editor/ws/get_topicCors.php",
