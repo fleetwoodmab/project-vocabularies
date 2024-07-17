@@ -202,6 +202,8 @@ var Editor = {
                                 //alert(data.result);
                                 if (data.result != null) {
                                     let preview = data.result.NEW_VALUE.trim().replace(/^\s+|\s+$/g, "").replaceAll("\"", "\\\"").replaceAll("\'", "\\\'");
+                                    console.log("Existing Value (val):", val);
+                                    console.log("New Value (preview):", preview);
                                     if (preview === val) {
                                         alert("The new value is the same as the existing value. No changes will be made.");
                                         return;
